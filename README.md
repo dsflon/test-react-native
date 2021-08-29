@@ -28,6 +28,15 @@ $ expo start 後の管理画面 `Run on Ios simulator` から起動
 $ emulator @Pixel_5_API_29 -dns-server 8.8.8.8
 ```
 
+### エミュレータ画面のリロード
+```
+// iOS
+
+
+// Android
+r キーを2回押下
+```
+
 
 # expo アプリの共有
 
