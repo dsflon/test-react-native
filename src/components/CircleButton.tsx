@@ -5,16 +5,18 @@ import {
 
 interface Props {
   children?: string;
+  style?: object;
 }
 
 export default class CircleButton extends React.PureComponent<Props> {
   render() {
     const {
       children,
+      style,
     } = this.props;
 
     return (
-      <View style={styles.circleButton}>
+      <View style={[styles.circleButton, style]}>
         <Text style={styles.circleButtonText}>{children || '＋'}</Text>
       </View>
     );
@@ -29,9 +31,6 @@ const styles = StyleSheet.create({
     borderRadius: 32,
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
-    right: 30,
-    bottom: 30,
     // ios
     shadowColor: '#000000',
     shadowOffset: { width: 2, height: 4 },

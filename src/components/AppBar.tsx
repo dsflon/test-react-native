@@ -30,7 +30,6 @@ export default class AppBar extends React.PureComponent {
 }
 
 const styles = StyleSheet.create({
-
   appBar: {
     width: '100%',
     height: 104,
