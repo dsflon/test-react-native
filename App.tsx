@@ -7,6 +7,7 @@ import MemoDetail from '@pages/MemoDetail';
 export default function App() {
   return (
     <View style={styles.container}>
+      {/* <MemoListScreen /> */}
       <MemoDetail />
     </View>
   );

@@ -9,7 +9,7 @@ import CircleButton from '@components/CircleButton';
 export default class MemoDetail extends React.PureComponent {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <AppBar />
 
         <View style={styles.headerWrapper}>
@@ -21,7 +21,7 @@ export default class MemoDetail extends React.PureComponent {
               2020年12月24日 10:00
             </Text>
           </View>
-          <CircleButton style={styles.circleButton}>＋</CircleButton>
+          <CircleButton style={styles.circleButton} name="edit-2" />
         </View>
 
         <ScrollView style={styles.body}>
@@ -39,7 +39,6 @@ export default class MemoDetail extends React.PureComponent {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F0F4F8',
   },
   headerWrapper: {
     position: 'relative',

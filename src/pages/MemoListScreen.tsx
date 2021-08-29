@@ -10,16 +10,19 @@ import CircleButton from '@components/CircleButton';
 export default class MemoListScreen extends React.PureComponent {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <AppBar />
         <MemoList />
-        <CircleButton style={styles.circleButton}>＋</CircleButton>
+        <CircleButton style={styles.circleButton} name="plus" />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   circleButton: {
     position: 'absolute',
     right: 30,

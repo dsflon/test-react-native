@@ -54,3 +54,4 @@ expo publish
 
 - ブロック要素は dispaly: flex; がデフォルトとなっている
 - flex-derection: column; （縦組み）がデフォルトとなっている
+- icon は https://icons.expo.fyi/ が便利

@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import {
-  View, Text, StyleSheet,
+  View, StyleSheet,
 } from 'react-native';
 
+import { Feather } from '@expo/vector-icons';
+
+type FeatherNames = ComponentProps<typeof Feather>['name'];
+
 interface Props {
-  children?: string;
+  name?: FeatherNames;
   style?: object;
 }
 
 export default class CircleButton extends React.PureComponent<Props> {
   render() {
     const {
-      children,
       style,
+      name,
     } = this.props;
 
     return (
       <View style={[styles.circleButton, style]}>
-        <Text style={styles.circleButtonText}>{children || '＋'}</Text>
+        <Feather name={name || 'plus'} size={24} color="#ffffff" />
       </View>
     );
   }

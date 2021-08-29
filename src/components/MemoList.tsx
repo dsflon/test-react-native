@@ -3,6 +3,8 @@ import {
   View, Text, StyleSheet,
 } from 'react-native';
 
+import { Feather } from '@expo/vector-icons';
+
 // interface Props {
 //   children: string;
 //   test?: number | undefined;
@@ -28,7 +30,7 @@ export default class MemoList extends React.PureComponent {
             <Text style={styles.listDate}>2021年8月29日 19:00</Text>
           </View>
           <View>
-            <Text style={styles.listDelete}>✕</Text>
+            <Feather name="x" size={18} color="#999999" />
           </View>
         </View>
         {/* item end */}
@@ -39,7 +41,7 @@ export default class MemoList extends React.PureComponent {
             <Text style={styles.listDate}>2021年8月29日 19:00</Text>
           </View>
           <View>
-            <Text style={styles.listDelete}>✕</Text>
+            <Feather name="x" size={18} color="#999999" />
           </View>
         </View>
         {/* item end */}
@@ -63,9 +65,5 @@ const styles = StyleSheet.create({
   },
   listDate: {
     color: '#999999',
-  },
-  listDelete: {
-    color: '#999999',
-    fontSize: 18,
   },
 });
