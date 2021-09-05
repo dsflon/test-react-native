@@ -2,13 +2,17 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 // import MemoListScreen from '@pages/MemoListScreen';
-import MemoDetail from '@pages/MemoDetail';
+// import MemoDetail from '@pages/MemoDetail';
+// import MemoEditor from '@pages/MemoEditor';
+import MemoCreator from '@pages/MemoCreator';
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <MemoListScreen /> */}
-      <MemoDetail />
+      {/* <MemoDetail /> */}
+      {/* <MemoEditor /> */}
+      <MemoCreator />
     </View>
   );
 }
