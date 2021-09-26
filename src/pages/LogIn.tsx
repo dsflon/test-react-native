@@ -1,12 +1,22 @@
 import React from 'react';
 import {
-  View, Text, TextInput, StyleSheet,
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
 } from 'react-native';
 
 import AppBar from '@components/AppBar';
 import Button from '@components/Button';
 
 export default class LogIn extends React.PureComponent {
+  // eslint-disable-next-line class-methods-use-this
+  login() {
+    Alert.alert('login');
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -19,11 +29,13 @@ export default class LogIn extends React.PureComponent {
             <TextInput style={styles.input} value="Password" />
           </View>
 
-          <Button label="Submit" />
+          <Button label="Submit" onPress={this.login} />
 
           <View style={styles.footerConteiner}>
             <Text style={styles.footerText}>Not registered?</Text>
-            <Text style={styles.footerLink}>Sign up here!</Text>
+            <TouchableOpacity>
+              <Text style={styles.footerLink}>Sign up here!</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>

@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 
 import { Feather } from '@expo/vector-icons';
@@ -29,9 +32,9 @@ export default class MemoList extends React.PureComponent {
             <Text style={styles.listTitle}>買い物リスト</Text>
             <Text style={styles.listDate}>2021年8月29日 19:00</Text>
           </View>
-          <View>
+          <TouchableOpacity>
             <Feather name="x" size={18} color="#999999" />
-          </View>
+          </TouchableOpacity>
         </View>
         {/* item end */}
 
@@ -40,9 +43,9 @@ export default class MemoList extends React.PureComponent {
             <Text style={styles.listTitle}>買い物リスト</Text>
             <Text style={styles.listDate}>2021年8月29日 19:00</Text>
           </View>
-          <View>
+          <TouchableOpacity>
             <Feather name="x" size={18} color="#999999" />
-          </View>
+          </TouchableOpacity>
         </View>
         {/* item end */}
       </View>

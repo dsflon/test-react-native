@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet,
+  TouchableOpacity, Text, StyleSheet,
 } from 'react-native';
 
 // import { Feather } from '@expo/vector-icons';
@@ -9,18 +9,20 @@ import {
 
 interface Props {
   label: string;
+  onPress?(): void;
 }
 
 export default class Button extends React.PureComponent<Props> {
   render() {
     const {
       label,
+      onPress,
     } = this.props;
 
     return (
-      <View style={styles.buttonContainer}>
+      <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
         <Text style={styles.buttonLabel}>{ label }</Text>
-      </View>
+      </TouchableOpacity>
     );
   }
 }

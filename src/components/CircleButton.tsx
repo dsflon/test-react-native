@@ -1,6 +1,6 @@
 import React, { ComponentProps } from 'react';
 import {
-  View, StyleSheet,
+  TouchableOpacity, StyleSheet,
 } from 'react-native';
 
 import { Feather } from '@expo/vector-icons';
@@ -10,6 +10,7 @@ type FeatherNames = ComponentProps<typeof Feather>['name'];
 interface Props {
   name?: FeatherNames;
   style?: object;
+  onPress?(): void;
 }
 
 export default class CircleButton extends React.PureComponent<Props> {
@@ -17,12 +18,13 @@ export default class CircleButton extends React.PureComponent<Props> {
     const {
       style,
       name,
+      onPress,
     } = this.props;
 
     return (
-      <View style={[styles.circleButton, style]}>
+      <TouchableOpacity style={[styles.circleButton, style]} onPress={onPress}>
         <Feather name={name || 'plus'} size={24} color="#ffffff" />
-      </View>
+      </TouchableOpacity>
     );
   }
 }
