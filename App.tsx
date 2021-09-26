@@ -4,7 +4,9 @@ import { StyleSheet, View } from 'react-native';
 // import MemoListScreen from '@pages/MemoListScreen';
 // import MemoDetail from '@pages/MemoDetail';
 // import MemoEditor from '@pages/MemoEditor';
-import MemoCreator from '@pages/MemoCreator';
+// import MemoCreator from '@pages/MemoCreator';
+// import LogIn from '@pages/LogIn';
+import SignUp from '@pages/SignUp';
 
 export default function App() {
   return (
@@ -12,7 +14,9 @@ export default function App() {
       {/* <MemoListScreen /> */}
       {/* <MemoDetail /> */}
       {/* <MemoEditor /> */}
-      <MemoCreator />
+      {/* <MemoCreator /> */}
+      {/* <LogIn /> */}
+      <SignUp />
     </View>
   );
 }
