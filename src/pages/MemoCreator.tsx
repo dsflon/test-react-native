@@ -16,7 +16,7 @@ export default class MemoCreator extends React.PureComponent {
           <TextInput value="" multiline style={styles.input} />
         </View>
 
-        <CircleButton style={styles.circleButton} name="edit-2" />
+        <CircleButton style={styles.circleButton} name="check" />
       </KeyboardAvoidingView>
     );
   }
